@@ -1,0 +1,6 @@
+PACKAGE=fsmon-rootless
+include ../../config.mk
+ARCH=iphoneos-arm64
+SECTION=Utilities
+PRIORITY=optional
+MAINTAINER=pancake <pancake@nowsecure.com>

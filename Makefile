@@ -120,6 +120,9 @@ ios-patch:
 cydia: ios
 	$(MAKE) -C dist/cydia
 
+cydia-rootless: ios
+	$(MAKE) -C dist/rootless
+
 macos:
 	$(CC) $(CFLAGS) -mmacosx-version-min=10.12 -DTARGET_OSX=1 -o fsmon-macos $(SOURCES) -framework CoreServices
 	strip fsmon-macos
