@@ -86,7 +86,7 @@ ${PACKAGE_DIR}/build: ${PACKAGE_DIR}/debian-binary ${PACKAGE_DIR}/control ${PACK
 
 # Convert GNU ar to BSD ar that debian requires.
 # Note: Order of files within ar archive is important!
-${PACKAGE_DIR}/${PACKAGE}_${VERSION}_${ARCH}-rootless.deb: ${PACKAGE_DIR}/build
+${PACKAGE_DIR}/${PACKAGE}_${VERSION}_${ARCH}.deb: ${PACKAGE_DIR}/build
 	ar -rc $@ $</debian-binary $</control.tar.gz $</data.tar.gz
 	#sed -e 's|^\([^/]\+\)/ \(.*\)|\1  \2|g' $@tmp > $@fail
 	#rm -f $@tmp
@@ -108,7 +108,7 @@ debroot:
 	$(MAKE) control
 	$(MAKE) deb
 
-deb: ${PACKAGE_DIR}/${PACKAGE}_${VERSION}_${ARCH}-rootless.deb
+deb: ${PACKAGE_DIR}/${PACKAGE}_${VERSION}_${ARCH}.deb
 
 clobber::
 	rm -rf ${PACKAGE_DIR}/debian_binary ${PACKAGE_DIR}/control \
