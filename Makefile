@@ -62,8 +62,8 @@ else
 IOS_ON_DEVICE_COMPILE=0
 IOS_SYSROOT=$(shell xcrun --sdk iphoneos --show-sdk-path)
 IOS_CC=$(shell xcrun --sdk iphoneos --find clang) $(IOS_CFLAGS)
-IOS_STRIP=$(shell xcrun --sdk iphoneos strip)
-LDID=ldid2
+IOS_STRIP=$(shell xcrun --sdk iphoneos --find strip)
+LDID=$(shell which ldid)
 endif
 
 # iWatch
