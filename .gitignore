@@ -143,4 +143,4 @@ dist/**/control/
 dist/**/data/
 dist/**/debian-binary
 dist/cydia/root/
-dist/rootless/var/
+dist/rootless/root/

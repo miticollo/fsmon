@@ -103,7 +103,7 @@ deb_clean: ${PACKAGE_DIR}/clean
 	rm -f debian-binary
 
 debroot:
-	cp -rf var/jb/* data
+	cp -rf root/* data
 	chown -R $(OWNER) data
 	$(MAKE) control
 	$(MAKE) deb
